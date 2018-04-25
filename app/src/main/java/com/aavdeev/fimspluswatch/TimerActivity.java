@@ -38,7 +38,7 @@ public class TimerActivity extends Activity {
             @Override
             public void run() {
                 int hours = seconds / 3600;
-                int minutes = (seconds / 3600) / 60;
+                int minutes = (seconds % 3600) / 60;
                 int sec = seconds % 60;
 
                 String time = String.format("%2d:%02d:%02d", hours, minutes, sec);
